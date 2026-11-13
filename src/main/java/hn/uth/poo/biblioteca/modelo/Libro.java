@@ -1,0 +1,61 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package hn.uth.poo.biblioteca.modelo;
+
+/**
+ *
+ * @author Usuario
+ */
+
+public class Libro {
+    private Integer id;
+    private String isbn;
+    private String titulo;
+    private int anio;
+    private double precio;
+    private Autor autor;
+
+    public Libro() {}
+
+    public Libro(String isbn, String titulo, int anio, double precio, Autor autor) {
+        this.isbn = isbn;
+        this.titulo = titulo;
+        this.anio = anio;
+        this.precio = precio;
+        this.autor = autor;
+    }
+
+    public Libro(Integer id, String isbn, String titulo, int anio, double precio, Autor autor) {
+        this.id = id;
+        this.isbn = isbn;
+        this.titulo = titulo;
+        this.anio = anio;
+        this.precio = precio;
+        this.autor = autor;
+    }
+
+    public Integer getId() { return id; }
+    public void setId(Integer id) { this.id = id; }
+
+    public String getIsbn() { return isbn; }
+    public void setIsbn(String isbn) { this.isbn = isbn; }
+
+    public String getTitulo() { return titulo; }
+    public void setTitulo(String titulo) { this.titulo = titulo; }
+
+    public int getAnio() { return anio; }
+    public void setAnio(int anio) { this.anio = anio; }
+
+    public double getPrecio() { return precio; }
+    public void setPrecio(double precio) { this.precio = precio; }
+
+    public Autor getAutor() { return autor; }
+    public void setAutor(Autor autor) { this.autor = autor; }
+
+    @Override
+    public String toString() {
+        return titulo + " [ISBN: " + isbn + "] - L. " + precio;
+    }
+}
